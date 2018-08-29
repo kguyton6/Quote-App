@@ -1,0 +1,98 @@
+body {
+    background-repeat: none;  
+     background-image: url('./background.jpg');
+     
+   
+}
+main{ 
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+p {
+    position: absolute;
+    color: white;
+    font-family: fantasy;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Header {
+    padding-top: 30px;
+    position: relative;
+    font-family: fantasy;
+    font-size: 60px;
+    color: rgb(254, 254, 255);
+    height: 20vh;
+    text-align: center;
+    justify-content: center;
+    font-display: bold; 
+    font-stretch: extra-expanded;
+    background-color: clear;
+    
+}
+
+.Footer {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background-color: clear;
+    bottom: 0px;
+
+}
+#span {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* button {
+
+
+
+    width: 60px;
+    height:  30px;;
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    color: #990054;
+    font-size: inherit;
+    background-color: white;
+    border-radius: 10px
+} */
+
+#input1 {
+    position: absolute;
+    background-color: white;
+   
+   bottom: 100px;
+   left: 30px;
+}
+
+ .container {   
+     position: absolute;
+     justify-content: space-between;
+    width: 300px;
+    height: inherit;
+    bottom: 150px;
+    left: 50px;
+    font-size: 24px;
+    font-family: fantasy;
+    color: white;
+    
+
+ }
+ h5 {
+    color: white;
+    font-family: fantasy;
+    font-size: 24px;
+    text-indent: 60px;
+ }
+
+link {
+    color: white;
+    text-decoration: none;
+}
+
