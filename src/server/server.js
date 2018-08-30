@@ -1,13 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const ctrl = require('./Controller/module_controller')
-// const webpack = require('webpack')
+
 const app = express()
 app.use(bodyParser.json())
 
-app.get('/api/dailyquotes/', ctrl.create)
-app.post('/api/dailyquotes/', ctrl.read)
-
+app.get('http://quotes.rest/qod', ctrl.create )
+app.post('api/dailyquotes/', ctrl.read)
+app.put(`/api/dailyquotes/favorites`,  ctrl.update)
 
 
 const PORT = 4800
