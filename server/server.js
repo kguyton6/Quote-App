@@ -5,9 +5,9 @@ const ctrl = require('./Controller/module_controller')
 const app = express()
 app.use(bodyParser.json())
 
-app.get('http://quotes.rest/qod', ctrl.create )
-app.post('api/dailyquotes/', ctrl.read)
-app.put(`/api/dailyquotes/favorites`,  ctrl.update)
+app.get('/api/dailyquotes', ctrl.create )
+app.post(`api/dailyquotes/comments`, ctrl.read)
+// app.put(`/api/dailyquotes/favorites`,  ctrl.update)
 
 
 const PORT = 4800

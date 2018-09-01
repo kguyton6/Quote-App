@@ -1,3 +1,4 @@
+
 body {
     background-repeat: none;  
      background-image: url('./background.jpg');
@@ -10,13 +11,11 @@ main{
     padding-top: 10px;
     
 }
-p {
-    position: absolute;
+h3 {
+    
+    align-content: center;
     color: white;
     font-family: fantasy;
-    font-size: 30px;
-    margin-left: 200px;
-    margin-right: 200px;
 }
 
 .Header {
@@ -63,7 +62,7 @@ p {
     border-radius: 10px
 } */
 
-#input1 {
+.inputs {
     position: absolute;
     background-color: white;
    
@@ -76,8 +75,8 @@ p {
      justify-content: space-between;
     width: 300px;
     height: inherit;
-    bottom: 150px;
-    left: 50px;
+    
+
     font-size: 24px;
     font-family: fantasy;
     color: white;
@@ -94,5 +93,15 @@ p {
 link {
     color: white;
     text-decoration: none;
+}
+
+
+form {
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    background-color: white;
+    right: 500px;
+    bottom: 0px;
 }
 

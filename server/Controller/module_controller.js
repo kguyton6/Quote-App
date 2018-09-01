@@ -1,5 +1,6 @@
-let quoteStorage = []
+let quotes = []
 let id = 0
+let comment = ''
 // let favorites = []
 
 
@@ -7,15 +8,16 @@ let id = 0
 module.exports = {
      create: (req, res) => {
        let { quote } =  req.body
-       quoteStorage.push(quote, id)
+       quote.push(quotes, id)
        id++
        res.status(200).send(quote)
        
            },
 
-        read: (req,res) => { res = 
-        
-          res.status(200).send(dailyQuote)
+        read: (req,res) => { req =
+           req.body.comment 
+      
+            res.status(200).send({comment})
 
         }
        }

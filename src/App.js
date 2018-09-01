@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
 import Header from './components/Header'
+import Inputs from './components/Inputs'
 import Form from './components/Form'
-// import './routes'
+
 
 
 class App extends Component {
@@ -11,20 +12,21 @@ class App extends Component {
     super(props)
     this.state = {
      quote: [],
-     savedFavorites: [],
-     id: 0
+     comments: [],
+     id: 0,
+     category: true
     }
-    // this.postFavorites = this.postFavorites.bind(this)
+    this.updateChange = this.updateChange.bind(this)
     this.componentDidMount = this.componentDidMount.bind(this)
-    // this.handleSave = this.handleSave.bind(this)
+    this.handlesClick = this.handlesClick.bind(this)
   }
 
  componentDidMount() {
     axios.get(`http://quotes.rest/qod/`)
       .then((res) => {
         this.setState({ 
-        quote: res.data.contents.quotes[0]})
-
+        quote: res.data.contents.quotes[0].quote})
+          console.log(res.data)
       })
   
       
@@ -33,16 +35,19 @@ class App extends Component {
       })
    }  
 
-  handlesTheQuotes(quote){
-  axios.post(`/api/dailyquotes/`, quote).then((res) => {
-    res = dailyQuote
-   
-  })
-}
-
-handleFavorite(req, res){
-    axios.put('/api/')
+   updateChange(val){
+    this.setState({ comments : val })
   }
+  
+ 
+  handlesClick(val){
+    axios.post('api/dailyquotes/comments')
+   this.setState({comments: val}) 
+  }
+  
+
+
+
  
   render() {
    
@@ -50,14 +55,15 @@ handleFavorite(req, res){
       <div className="App">
       <Header />
  
-     
+    <h3> {this.state.quote}</h3>
+      <main>
+        <Inputs updateChange={this.updateChange} handlesClick={this.handlesClick}/>
+      <Form savedName={this.state.savedName}/>
+      </main>
       
     
-      
-      <button onClick={() => this.handleSave()}> Save</button>
-      <button onClick={() => this.getFavorites()}>favorites</button>
      
-      <Form /> */}
+
      
 
       
