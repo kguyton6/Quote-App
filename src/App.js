@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
 import Header from './components/Header'
-import Inputs from './components/Inputs'
+// import Input from './components/Inputs'
 import Form from './components/Form'
 
 
@@ -12,13 +12,10 @@ class App extends Component {
     super(props)
     this.state = {
      quote: [],
-     comments: [],
-     id: 0,
-     category: true
+     
+
+
     }
-    this.updateChange = this.updateChange.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
-    this.handlesClick = this.handlesClick.bind(this)
   }
 
  componentDidMount() {
@@ -35,17 +32,6 @@ class App extends Component {
       })
    }  
 
-   updateChange(val){
-    this.setState({ comments : val })
-  }
-  
- 
-  handlesClick(val){
-    axios.post('api/dailyquotes/comments')
-   this.setState({comments: val}) 
-  }
-  
-
 
 
  
@@ -57,8 +43,8 @@ class App extends Component {
  
     <h3> {this.state.quote}</h3>
       <main>
-        <Inputs updateChange={this.updateChange} handlesClick={this.handlesClick}/>
-      <Form savedName={this.state.savedName}/>
+
+      <Form />
       </main>
       
     

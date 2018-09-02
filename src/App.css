@@ -11,12 +11,35 @@ main{
     padding-top: 10px;
     
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color:11B2EB;
+
+}
+
+input {
+    width: 100px;
+}
+
+button {
+    width: 50px;
+}
+
+textarea {
+    width: 400px;
+    height: 300px;
+    
+}
+
 h3 {
     
     align-content: center;
     color: white;
     font-family: fantasy;
 }
+
 
 .Header {
     padding-top: 30px;
@@ -41,67 +64,3 @@ h3 {
     bottom: 0px;
 
 }
-#span {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-/* button {
-
-
-
-    width: 60px;
-    height:  30px;;
-    position: absolute;
-    bottom: 40px;
-    left: 100px;
-    color: #990054;
-    font-size: inherit;
-    background-color: white;
-    border-radius: 10px
-} */
-
-.inputs {
-    position: absolute;
-    background-color: white;
-   
-   bottom: 100px;
-   left: 30px;
-}
-
- .container {   
-     position: absolute;
-     justify-content: space-between;
-    width: 300px;
-    height: inherit;
-    
-
-    font-size: 24px;
-    font-family: fantasy;
-    color: white;
-    
-
- }
- h5 {
-    color: white;
-    font-family: fantasy;
-    font-size: 24px;
-    text-indent: 60px;
- }
-
-link {
-    color: white;
-    text-decoration: none;
-}
-
-
-form {
-    position: absolute;
-    width: 700px;
-    height: 600px;
-    background-color: white;
-    right: 500px;
-    bottom: 0px;
-}
-
