@@ -14,7 +14,13 @@ class Form extends Component{
     }
     
         
-    handleClick(){}
+    handleClick(){
+        this.setState({
+            firstname: ' ',
+            lastname: ' ',
+            textArea: ' '
+        })
+    }
             
 
     render(){
@@ -28,7 +34,7 @@ class Form extends Component{
            <textarea className="textarea" placeholder='my thoughts...' 
              onChange={ e => (this.setState({ text: e.target.value }))}>
           </textarea>     
-            <button onClick={this.handleClick}>
+            <button onClick={console.log(this.handleClick)}>
             save
          </button>
       </form>
