@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
 import Header from './components/Header'
-// import Input from './components/Inputs'
 import Form from './components/Form'
+
 
 
 
@@ -32,7 +32,7 @@ class App extends Component {
       })
    }  
 
-
+   
 
  
   render() {
@@ -43,8 +43,10 @@ class App extends Component {
  
     <h3> {this.state.quote}</h3>
       <main>
-
-      <Form />
+        <div>
+        { <Form />}
+        </div>
+     
       </main>
       
     
